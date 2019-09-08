@@ -1,0 +1,16 @@
+# Project specific
+/node_modules/
+/coverage/
+
+# Other
+*.log
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+.idea
+*.iml
+.vscode
+*.swp
+*.swo
+*~
+*.pyc

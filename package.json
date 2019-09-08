@@ -1,0 +1,82 @@
+{
+  "name": "l0gg3r",
+  "version": "0.6.0",
+  "description": "Minimalistic logging library for javascript",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "devserver": "nodemon ./example.js",
+    "prettier": "prettier \"./lib/**/*.+(js|json|yml|yaml|md|mdx)\"",
+    "unprettified": "npm run prettier -- --list-different",
+    "format": "npm run prettier -- --write",
+    "lint": "eslint ./lib/ -c ./.eslintrc --ext js",
+    "fix": "eslint ./lib/ --fix",
+    "validate": "run-p lint unprettified",
+    "test": "jest --runInBand",
+    "test-watch": "jest --watch --runInBand",
+    "test-watchall": "jest --watchAll --runInBand",
+    "coverage": "jest --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true,
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
+    ],
+    "collectCoverageFrom": [
+      "<rootDir>/lib/**/*.js"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./lib/**/*.{js}": [
+      "npm run format",
+      "npm run fix",
+      "jest --runInBand --findRelatedTests",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sulaiman1073/l0gg3r.git"
+  },
+  "keywords": ["logger"],
+  "author": "sulaiman1073",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sulaiman1073/l0gg3r/issues"
+  },
+  "homepage": "https://github.com/sulaiman1073/l0gg3r#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "fast-redact": "^1.5.0",
+    "fast-safe-stringify": "^2.0.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.3",
+    "@types/supertest": "^2.0.8",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.16.0",
+    "eslint-plugin-node": "^9.2.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "husky": "^3.0.5",
+    "jest": "^24.9.0",
+    "jest-watch-typeahead": "^0.3.1",
+    "lint-staged": "^9.2.5",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2"
+  }
+}
