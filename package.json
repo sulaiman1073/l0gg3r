@@ -46,7 +46,9 @@
     "type": "git",
     "url": "git+https://github.com/sulaiman1073/l0gg3r.git"
   },
-  "keywords": ["logger"],
+  "keywords": [
+    "logger"
+  ],
   "author": "sulaiman1073",
   "license": "MIT",
   "bugs": {
@@ -54,29 +56,29 @@
   },
   "homepage": "https://github.com/sulaiman1073/l0gg3r#readme",
   "dependencies": {
-    "chalk": "^2.4.2",
-    "fast-redact": "^1.5.0",
-    "fast-safe-stringify": "^2.0.6"
+    "chalk": "^3.0.0",
+    "fast-redact": "^2.0.0",
+    "fast-safe-stringify": "^2.0.7"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.18",
-    "@types/node": "^12.7.3",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.30",
     "@types/supertest": "^2.0.8",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-eslint-comments": "^3.1.2",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.16.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.8.2",
     "eslint-plugin-node": "^9.2.0",
-    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^4.2.1",
-    "husky": "^3.0.5",
-    "jest": "^24.9.0",
-    "jest-watch-typeahead": "^0.3.1",
-    "lint-staged": "^9.2.5",
-    "nodemon": "^1.19.1",
+    "husky": "^3.1.0",
+    "jest": "^25.1.0",
+    "jest-watch-typeahead": "^0.4.2",
+    "lint-staged": "^9.5.0",
+    "nodemon": "^2.0.2",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.18.2"
+    "prettier": "^1.19.1"
   }
 }
